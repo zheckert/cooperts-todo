@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+user = User.create!(name: 'John Doe', email: 'john@email.com', password: '123')
+
+3.times do |i|
+    TodoItem.create!(title: "TodoItem #{i}", description: 'Some important staff', done: false, user_id: user.id)
+end
+
