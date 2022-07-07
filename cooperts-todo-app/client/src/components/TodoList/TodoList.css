@@ -16,13 +16,30 @@
 }
 
 .top-heading {
-  color: rgb(48, 2, 2);
-  font-family: "Times New Roman", Times, serif, sans-serif;
+  color: rgba(0, 0, 0, 0.732);
+  font-family: Arial, Helvetica, sans-serif;
   padding: 7px;
   text-align: center;
 }
 
+.add-button {
+  font-size: large;
+  margin-left: 10px;
+  padding: 0px 20px 0px 20px;
+  color: rgba(0, 0, 0, 0.732);
+  background-color: rgb(132, 215, 250);
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px rgb(103, 169, 197);
+}
+
+.add-button:hover {
+  background-color: rgb(109, 178, 208);
+}
+
 .list-items {
+  color: rgba(0, 0, 0, 0.732);
   padding: 0 30px;
 }
 
@@ -43,11 +60,13 @@ input.item-checkbox {
 }
 
 .item {
-  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
   font-size: 1.5em;
-  border-bottom: 2px solid rgba(80, 2, 90, 0.411);
-  padding: 5px 0;
+  border-bottom: 1px dashed rgba(80, 2, 90, 0.411);
+  padding-top: 3px;
 }
 
 .item:hover .remove-item-button {
@@ -76,16 +95,21 @@ input.itemCheckbox + label.itemDisplay {
   color: black;
 }
 
-input[placeholder] {
-  font-size: 1.2em;
+input::placeholder {
+  font-style: italic;
+  margin-left: 20px;
 }
 
 .task-container {
   padding: 15px;
+  display: flex;
+}
+
+.item-title {
+  justify-content: left;
 }
 
 .remove-item-button {
-  float: right;
   visibility: hidden;
   color: red;
   background: rgba(0, 0, 0, 0);
@@ -101,8 +125,10 @@ input[placeholder] {
 }
 
 .task-container .new-task {
+  border: 2px;
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

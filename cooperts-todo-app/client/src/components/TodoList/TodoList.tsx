@@ -94,21 +94,21 @@ class TodoList extends React.Component<Props, State> {
   render() {
     return (
       <div className="main-container">
-        <h1 className="top-heading">ToDo List</h1>
+        <h1 className="top-heading">To-Do List</h1>
         <CustomError error={this.state.error} />
         <form>
           <div className="task-container">
             <input
+              placeholder="What do you need to do?"
               className="new-task"
               value={this.state.newTask}
               onChange={this.onChangeTitle}
             />
-            <button onClick={this.onClick}>Add</button>
+            <button className="add-button" onClick={this.onClick}>
+              Add
+            </button>
           </div>
-          <div
-            className="wrap-items"
-            // style={{ display: "flex", width: 300, position: "relative" }}
-          >
+          <div className="wrap-items">
             <div className="list-items">
               {this.state.data.map(({ id, title, done }) => (
                 <div className="item" key={id}>
@@ -122,7 +122,6 @@ class TodoList extends React.Component<Props, State> {
                   <div
                     className="remove-item-button"
                     onClick={() => this.onDelete(id)}
-                    // style={{ position: "absolute", right: 0 }}
                   >
                     X
                   </div>
